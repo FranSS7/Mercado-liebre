@@ -1,0 +1,179 @@
+/* 
+● Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Righteous&family=Roboto:ital@0;1&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+font-family: 'Righteous', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #ebebeb;;
+}
+header{
+ width: 100%;
+ font-family: 'Righteous', sans-serif;
+font-family: 'Roboto', sans-serif;
+background-color: #EAC926;
+ height: 100%;
+ padding-bottom: 30px;
+}
+
+/*Main */
+main {
+    width: 90%;
+    margin: 0 auto; /* Para centrar */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre cada artículo */
+}
+
+.sect-productos img{
+}
+.sect-productos {
+    width: calc(50% - 10px); /* Tamaño con el espacio entre artículos */
+    margin: 0 5px 10px 5px; /* Margen alrededor de cada artículo */
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-top: 1px solid #ebebeb; /* Borde superior de 1px */
+    padding: 15px; /* Separación interna de 15px */
+}
+.info-producto {
+    border-top: 2px solid #ebebeb;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    gap: 10px;
+    position: relative;
+
+}
+
+
+.sect-productos i {
+    
+text-align: center;
+margin: 5px;
+border-radius: 50%; 
+border: 2px solid #39b54a;
+color: #39b54a;
+padding: 5px 5px 5px 5px;
+font-size: 1.2em;
+position: absolute;
+right: 20px;
+top: -15px;
+background-color: white;
+
+}
+
+
+ .descuentos-productos{
+    font-size: 16px;
+    color: #39b54a;
+}
+.precios-productos{
+    font-size: 1.5em;
+    margin: 1px;
+}
+.sect-productos h3{
+    margin-top: 20px;
+    color: #666 ;
+}
+/* Logo mercadoLibere*/
+
+
+
+.logo img{
+    margin: 30px 0px 15px 30px ;
+    width: 40%;
+}
+ /* buscador */
+.busqueda{
+    margin: 0px 0px 15px 15px;
+}
+
+/* hamburguesa*/
+.burger-menu{
+    text-align: center;
+    margin-top: 20px;
+}
+.burger-menu i {
+    background-color:#1259c3;
+    font-size: 25px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: white;
+}
+
+/* Pie de pagina Footer*/
+footer{
+    margin-top: 8vh;
+}
+
+.sec-footer{
+    text-align: center;
+    margin: 100px 40px;
+}
+.sec-footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+.sec-footer p{
+    color: #666;
+}
+
+
+ul li a{
+  text-decoration: none;
+}
+
+.header-nav{
+    margin: 10px 0px;
+}
+
+
+
+.titular {
+    font-size: 24px;
+}
+
+.producto-precio{
+ font-size: 18px;
+}
+
+
+
+.cuotas {
+    text-align: center;
+}
+
+
+/* Adaptacion */
+/* Reglas de estilo generales aquí */
+
+/* Ocultar la descripción del artículo en dispositivos móviles (ancho máximo de 360px) */
+@media screen and (max-width: 360px) {
+    .info-producto p {
+      display: none;
+    }
+  }
+  
+
+  @media screen and (min-width: 361px) {
+
+    .info-producto p {
+      display: block; 
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+  }
