@@ -1,23 +1,27 @@
-/* 
-● Paleta de colores
-Amarillo: #EAC926;
-Azul: #03264C;
-Celeste: #1259c3;
-Gris oscuro: #666;
-Gris claro: #ebebeb;
-Verde: #39b54a;*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Righteous&family=Roboto:ital@0;1&display=swap');
+
+
+:root {
+    --yellow: #eac926;
+    --blue: #03264c;
+    --blue-light: #1259c3;
+    --gray-dark: #666;
+    --gray-light: #ebebeb;
+    --green: #39b54a;
+  }
 
 *{
     box-sizing: border-box;
     margin: 0;
+
     padding: 0;
     font-family: 'Poppins', sans-serif;
 font-family: 'Righteous', sans-serif;
 font-family: 'Roboto', sans-serif;
 }
 body{
-    background-color: #ebebeb;;
+  background-color: var(--light-gray);
 }
 header{
  width: 100%;
@@ -31,35 +35,52 @@ background-color: #EAC926;
 /*Main */
 main {
     width: 90%;
-    margin: 0 auto; /* Para centrar */
+    margin: 0 auto; 
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Espacio entre cada artículo */
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
 }
 
 .sect-productos img{
+width: 100%;
 }
 .sect-productos {
-    width: calc(50% - 10px); /* Tamaño con el espacio entre artículos */
-    margin: 0 5px 10px 5px; /* Margen alrededor de cada artículo */
-    background-color: white;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border-top: 1px solid #ebebeb; /* Borde superior de 1px */
-    padding: 15px; /* Separación interna de 15px */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+  margin: 10px;
+  
+
 }
 .info-producto {
-    border-top: 2px solid #ebebeb;
-    display: flex;
-    justify-content: flex-start;
-    align-items: end;
-    gap: 10px;
-    position: relative;
+  padding: 15px;
+  border-top: var(--gris-claro) 1px solid;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #ebebeb;
+  gap: 0.8rem;
+  justify-content: space-around;
+  align-items: center;
 
+}
+.info-producto p {
+  display: flex;
+}
+.info-producto h3{
+  display: flex;
+  justify-content: start;
+  width: 100%;
 }
 
 
 .sect-productos i {
-    
+
 text-align: center;
 margin: 5px;
 border-radius: 50%; 
@@ -72,12 +93,15 @@ right: 20px;
 top: -15px;
 background-color: white;
 
+
 }
 
 
  .descuentos-productos{
-    font-size: 16px;
-    color: #39b54a;
+  font-size: 16px;
+  color: #39b54a;
+  width: 70%;
+  text-align: right;
 }
 .precios-productos{
     font-size: 1.5em;
@@ -115,7 +139,11 @@ background-color: white;
 
 /* Pie de pagina Footer*/
 footer{
-    margin-top: 8vh;
+  margin-top: 1.5rem;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  color: var(--gris-oscuro);
 }
 
 .sec-footer{
@@ -147,7 +175,9 @@ ul li a{
 }
 
 .producto-precio{
- font-size: 18px;
+  font-size: 1.5em;
+  margin: 1px;
+  width: 30%;
 }
 
 
@@ -160,20 +190,203 @@ ul li a{
 /* Adaptacion */
 /* Reglas de estilo generales aquí */
 
-/* Ocultar la descripción del artículo en dispositivos móviles (ancho máximo de 360px) */
-@media screen and (max-width: 360px) {
-    .info-producto p {
-      display: none;
-    }
-  }
-  
 
-  @media screen and (min-width: 361px) {
 
-    .info-producto p {
-      display: block; 
+@media screen and (max-width: 361px) {
+ 
+  nav ul {
+      display: none; 
+  }
+
+  .usuario ul 
+  {
+    display: none; 
+}
+
+.sect-productos {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+  margin: 10px;
+
+}
+  .sect-productos p {
+    display: flex;
+    width: 100%;
+  }
+  .sect-productos h3{
+    display: none; 
+  }
+}
+ 
+
+
+@media screen and (min-width: 362px) {
+
+  .contenedor-nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(173, 20, 20);
+    align-items: center;
+  }
+  .contenedor-nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   background-color: red;
+   margin: 0 30px;
+   align-items: center;
+  }
+
+    .sect-productos {
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      flex-basis: calc(50% - 10px);
+      margin-bottom: 20px;  
+      box-sizing: border-box; 
+      margin: 0;
+      margin-bottom: 20px; 
+
     }
+    
+
+  .contenedor-sec{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+  .burger-menu{
+    display: none;
+  }
+}
   
-  @media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
+  .contenedor-sec{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+
+
+.sect-productos {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  flex-basis: calc(25% - 10px); 
+  margin-bottom: 20px; 
+  box-sizing: border-box; 
+  margin: 0;
+  margin-bottom: 20px; 
+
+}
+.sect-productos p {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+.info-producto{
+
+  justify-content: flex-start;
+}
+}
+
+
+
+/*  Registro */
+
+/* Estilos generales para el formulario */
+.formulario {
+  max-width: 400px;
+  
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  background-color: #ebebeb;
+}
+
+/* Estilos para etiquetas */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilos para inputs de texto */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="file"] {
+  width: calc(100% - 12px);
+  padding: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para radios y checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Estilos para el botón Enviar y Borrar */
+input[type="submit"],
+input[type="reset"] {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+.regist{
+  text-align: center;
+ margin: 10px 0px;
+}
+
+
+
+.login{
+  max-width: 100%;
+  height: 35vh;
+  margin: 0 auto;
+  padding: 20px 25%;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  background-color: #ebebeb;
+}
+
+
+.login input[type="text"],
+input[type="password"] {
+  width: calc(100% - 12px);
+  height: 5vh;
+  padding: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px; 
+}
+.login input[type="submit"]{
+  width: 98%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 5vh;
+}
